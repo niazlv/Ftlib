@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 17:03:39 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/05 17:47:30 by ahector          ###   ########.fr       */
+/*   Created: 2021/10/05 17:36:59 by ahector           #+#    #+#             */
+/*   Updated: 2021/10/05 17:53:57 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef LIBFT_H
-# define LIBFT_H
 
-int	ft_isalpha(int c);
+#include "libft.h"
+#include <unistd.h>
 
-#endif
+int	main(int argc, char **argv)
+{
+	char	c;
+	
+	c = ft_isalpha(argv[1][0]);
+	c += 48;
+	write(1, &c, 1);
+
+	return (0);
+}
