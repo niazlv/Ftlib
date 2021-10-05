@@ -6,23 +6,11 @@
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:24:29 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/05 19:37:28 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/05 19:55:36 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isupper(int c)
-{
-	if (65 <= c && c <= 90)
-		return (1);
-	return (0);
-}
-
-int	ft_islower(int c)
-{
-	if (97 <= c && c <= 122)
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
