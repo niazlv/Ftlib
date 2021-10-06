@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 20:41:31 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/06 16:51:15 by ahector          ###   ########.fr       */
+/*   Created: 2021/10/06 16:21:21 by ahector           #+#    #+#             */
+/*   Updated: 2021/10/06 16:49:10 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int	ft_tolower(int c)
 {
-	unsigned char	*str;
-
-	str = (unsigned char *)b;
-	while (len--)
-	{
-		*str = (unsigned char)c;
-		str++;
-	}
-	return (b);
+	if (ft_isupper(c))
+		c += 32;
+	return (c);
 }
