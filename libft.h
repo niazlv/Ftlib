@@ -6,7 +6,7 @@
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:03:39 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/06 15:28:06 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/06 16:12:41 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -27,6 +27,7 @@ int			ft_isprint(int c);
 
 void		*ft_memset(void *b, int c, size_t len);
 void		ft_bzero(void *s, size_t n);
+void		ft_memcpy(void *dst, const void *src, size_t n);
 
 size_t		ft_strlen(const char *s);
 

@@ -6,7 +6,7 @@
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:41:31 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/06 15:20:45 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/06 15:34:17 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		*str = (unsigned char)c;
 		str++;
 	}
-	return (s);
+	return (b);
 }
