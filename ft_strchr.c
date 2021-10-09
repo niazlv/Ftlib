@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 20:12:55 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/09 17:30:28 by ahector          ###   ########.fr       */
+/*   Created: 2021/10/08 15:58:16 by ahector           #+#    #+#             */
+/*   Updated: 2021/10/08 16:20:47 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (' ' <= c && c <= '~')
-		return (1);
-	return (0);
+	while(*s)
+	{
+		if(*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if(c == 0)
+		return ((char *)s);
+	return (NULL);
 }

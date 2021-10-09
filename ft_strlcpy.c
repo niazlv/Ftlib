@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 20:12:55 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/09 17:30:28 by ahector          ###   ########.fr       */
+/*   Created: 2021/10/09 16:00:05 by ahector           #+#    #+#             */
+/*   Updated: 2021/10/09 17:29:31 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	if (' ' <= c && c <= '~')
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	len;
+
+	i = 0;
+	if (!src || !dst)
+		return (0);
+	len = ft_strlen(src);
+	if (dstsize == 0)
+		return (len);
+	while (i < dstsize-1 && src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (len);
 }
