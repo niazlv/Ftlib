@@ -20,13 +20,13 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	num = 0;
 	while (*str == '\f' || *str == '\n' || *str == '\r' \
-    || *str == '\t' || *str == '\v' || *str == ' ')
+		|| *str == '\t' || *str == '\v' || *str == ' ')
 		str++;
 	if (*str == '-')
 		sign = -sign;
-	if(*str == '+' || *str == '-')	
+	if (*str == '+' || *str == '-')
 		str++;
-	while('0' <= *str && *str <= '9')
+	while ('0' <= *str && *str <= '9')
 		num = (num * 10) + *str++ - '0';
 	return (num * sign);
 }

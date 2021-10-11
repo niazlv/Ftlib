@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 15:58:16 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/08 16:20:47 by ahector          ###   ########.fr       */
+/*   Created: 2021/10/11 17:17:39 by ahector           #+#    #+#             */
+/*   Updated: 2021/10/11 17:28:10 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	while (*s)
+	char	c;
+
+	if (n > 0)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		while(n/10 > 0)
+			
 	}
-	if (c == 0)
-		return ((char *)s);
-	return (NULL);
+	else if (n < 0)
+	{
+		while()
+	}	
+	else
+	{
+		write(fd, "0", 1);
+	}
 }
