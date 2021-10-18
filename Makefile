@@ -1,44 +1,50 @@
-NAME = libft.a
+INC				=	libft.h
 
-SRC = $(shell find . -name "*.c" ! -name "*_bonus.c")
+SRCS			=	ft_atoi.c ft_bzero.c ft_calloc.c ft_memset.c ft_strlen.c \
+					ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c  \
+					ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+					ft_isprint.c ft_toupper.c ft_tolower.c ft_strchr.c \
+					ft_strrchr.c ft_strncmp.c ft_strlcpy.c ft_strlcat.c \
+					ft_strnstr.c ft_atoi.c ft_strdup.c ft_substr.c 
+					#ft_strjoin.c \
+					#ft_isprint.c ft_memcmp.c \
+					#ft_strlcat.c ft_strncmp.c  ft_atoi.c  \
+					#ft_strchr.c  ft_strlcpy.c \
+					#ft_strnstr.c  ft_bzero.c  ft_memccpy.c \
+					#ft_memmove.c ft_strdup.c  ft_strlen.c  ft_strrchr.c \
+					#ft_calloc.c   ft_memchr.c   \
+					#ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
+					#ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+					#ft_putnbr_fd.c
 
-SRC_BONUS = $(shell find . -name "*_bonus.c")
+OBJS			= $(SRCS:.c=.o)
 
-OBJ = ${SRC:.c=.o}
+#BONUS			=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+#					ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+#					ft_lstmap.c
 
-OBJ_BONUS = ${SRC_BONUS:.c=.o}
+BONUS_OBJS		= $(BONUS:.c=.o)
 
-CFLAGS = -Wall -Werror -Wextra
+CC				= clang
+RM				= rm -f
+CFLAGS			= -Wall -Wextra -Werror -I.
 
-COMPILE = gcc $(CFLAGS) -c
+NAME			= libft.a
 
-LIB = ar rc $(NAME)
+all:			$(NAME)
 
-RANLIB = ranlib $(NAME)
+$(NAME):		$(OBJS) $(INC)
+				ar rcs $(NAME) $(OBJS)
 
-REMOVE = rm -f
-
-all: $(NAME)
-
-$(NAME):
-	@$(COMPILE) $(SRC)
-	@$(LIB) $(OBJ)
-	@$(RANLIB)
-
-bonus:
-	@$(COMPILE) $(SRC_BONUS)
-	@$(LIB) $(OBJ_BONUS)
-	@$(RANLIB)
+#bonus:			$(OBJS) $(BONUS_OBJS)
+#				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
-	@$(REMOVE) $(OBJ)
+				$(RM) $(OBJS) $(BONUS_OBJS)
 
-fclean: clean
-	@$(REMOVE) $(NAME)
+fclean:			clean
+				$(RM) $(NAME)
 
-re: fclean all
+re:				fclean $(NAME)
 
-so:
-	gcc -fPIC -c $(SRC)
-	gcc -shared -Wl,-soname,libft.so -o libft.so *.o
-.PHONY: all clean fclean re
+.PHONY:			all clean fclean re bonus
