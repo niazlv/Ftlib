@@ -16,29 +16,18 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		i;
-	int		n;
 	int		s1l;
 	int		s2l;
 	
-	if (!s1 && !s2)
-		return (NULL);
 	s1l = 0;
 	s2l = 0;
 	if (s1)
 		s1l = ft_strlen(s1);
 	if (s2)
 		s2l = ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (s2l+s1l));
-	if (!str)
-		return (NULL);
-	i = 0;
-	n = 0;
-	while (n < s1l)
-		str[i++] = s1[n++];
-	n = 0;
-	while(n < s2l)
-		str[i++] = s2[n++];
-	str[i] = 0;
+	str = (char *)malloc(sizeof(char) * (s1l + s2l + 1));
+	ft_memset(str, 0, s1l + s2l + 1);
+	ft_memcpy(str, s1, s1l);
+	ft_memcpy(&str[s1l], s2, s2l);
 	return (str);
 }
