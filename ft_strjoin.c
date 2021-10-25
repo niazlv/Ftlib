@@ -6,7 +6,7 @@
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 19:19:59 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/18 19:42:24 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/25 16:28:52 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	int		s1l;
 	int		s2l;
-	
+
 	s1l = 0;
 	s2l = 0;
 	if (s1)

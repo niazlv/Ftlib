@@ -6,7 +6,7 @@
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:03:39 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/09 19:54:18 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/25 16:27:51 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -55,6 +55,6 @@ char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_itoa(int n);
-char 		**ft_split(char const *s, char c);
+char		**ft_split(char const *s, char c);
 
 #endif
