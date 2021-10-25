@@ -6,7 +6,7 @@
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:50:13 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/09 19:55:46 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/25 18:46:41 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strdup(const char *s1)
 	char	*cp;
 	size_t	i;
 
+	if (s1 == NULL)
+		return (NULL);
 	cp = malloc(sizeof(char) * ft_strlen(s1) + 1);
 	if (!cp)
 		return (NULL);

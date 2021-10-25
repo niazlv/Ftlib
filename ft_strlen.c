@@ -6,7 +6,7 @@
 /*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:17:00 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/09 17:18:49 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/25 18:43:49 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
+	if (s == NULL)
+		return (0);
 	while (s[i] != 0)
 		i++;
 	return (i);
