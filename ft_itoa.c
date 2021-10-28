@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ahector <ahector@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 19:59:17 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/25 16:40:01 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/28 15:50:03 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numlen(int n)
+const int	ft_numlen(int n)
 {
 	int				len;
 
@@ -29,7 +29,7 @@ int	ft_numlen(int n)
 	return (len);
 }
 
-int	ft_itoa_sign(int n)
+const int	ft_itoa_sign(int n)
 {
 	int				sign;
 

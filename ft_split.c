@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ahector <ahector@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 16:01:50 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/25 16:33:34 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/28 15:51:15 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_words(char const *s, char c)
+const size_t	ft_count_words(char const *s, char c)
 {
 	size_t	words;
 	size_t	i;
@@ -33,7 +33,7 @@ size_t	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-char	*ft_get_str(char *str, char c)
+const char	*ft_get_str(char *str, char c)
 {
 	char	*s;
 
@@ -44,14 +44,14 @@ char	*ft_get_str(char *str, char c)
 	return (ft_strdup(s));
 }
 
-void	ft_free_mass(char **mass, size_t i)
+const void	ft_free_mass(char **mass, size_t i)
 {
 	while (i--)
 		free(mass[i]);
 	free(*mass);
 }
 
-char	**ft_get_strings(char *s, char c, size_t words_count, size_t i)
+const char	**ft_get_strings(char *s, char c, size_t words_count, size_t i)
 {
 	char	**strs;
 	char	*str;
