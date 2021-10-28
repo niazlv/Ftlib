@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahector <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ahector <ahector@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:03:39 by ahector           #+#    #+#             */
-/*   Updated: 2021/10/25 17:00:10 by ahector          ###   ########.fr       */
+/*   Updated: 2021/10/28 15:56:40 by ahector          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -16,8 +17,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int			ft_isupper(int c);
-int			ft_islower(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 
